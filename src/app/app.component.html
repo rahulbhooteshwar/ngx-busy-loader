@@ -1,66 +1,83 @@
-<ngx-spinner-circle-dotted></ngx-spinner-circle-dotted>
 <div class="container-fluid" style="padding:25px">
     <div class="row">
         <div class="col-xs-12">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
+            <div class="panel" [ngStyle]="{'border-color': demoColors[0]}">
+                <div class="panel-heading" [ngStyle]="{'background-color': demoColors[0]}">
                     ngx-spinner-circle-gradient
                 </div>
                 <div class="panel-body">
-                    <div class="row">
+                    <div class="row is-table-row">
                         <div class="col-xs-3">
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">
+                            <div class="panel" [ngStyle]="{'border-color': demoColors[0]}">
+                                <div class="panel-heading" [ngStyle]="{'background-color': demoColors[0]}">
                                     xl(Extra Large)
+                                    <a href="#" class="pull-right">
+                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                    </a>
                                 </div>
                                 <div class="panel-body">
-                                    <ngx-spinner-circle-gradient [color]="'#337AB7'" [size]="'xl'"></ngx-spinner-circle-gradient>
+                                    <ngx-spinner-circle-gradient [color]="demoColors[0]" [size]="'xl'"></ngx-spinner-circle-gradient>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xs-2">
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">
+                            <div class="panel" [ngStyle]="{'border-color': demoColors[0]}">
+                                <div class="panel-heading" [ngStyle]="{'background-color': demoColors[0]}">
                                     lg(Large)
+                                    <a href="#" class="pull-right">
+                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                    </a>
                                 </div>
                                 <div class="panel-body">
 
-                                    <ngx-spinner-circle-gradient [color]="'#337AB7'" [size]="'lg'"></ngx-spinner-circle-gradient>
+                                    <ngx-spinner-circle-gradient [color]="demoColors[0]" [size]="'lg'"></ngx-spinner-circle-gradient>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-1">
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">
+                        <div class="col-xs-2">
+                            <div class="panel" [ngStyle]="{'border-color': demoColors[0]}">
+                                <div class="panel-heading" [ngStyle]="{'background-color': demoColors[0]}">
                                     md(Medium)
+                                    <a href="#" class="pull-right">
+                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                    </a>
                                 </div>
                                 <div class="panel-body">
 
-                                    <ngx-spinner-circle-gradient [color]="'#337AB7'" [size]="'md'"></ngx-spinner-circle-gradient>
+                                    <ngx-spinner-circle-gradient [color]="demoColors[0]" [size]="'md'"></ngx-spinner-circle-gradient>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-1">
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">
+                        <div class="col-xs-2">
+                            <div class="panel" [ngStyle]="{'border-color': demoColors[0]}">
+                                <div class="panel-heading" [ngStyle]="{'background-color': demoColors[0]}">
                                     sm(small)
+                                    <a href="#" class="pull-right">
+                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                    </a>
                                 </div>
                                 <div class="panel-body">
 
-                                    <ngx-spinner-circle-gradient [color]="'#337AB7'" [size]="'sm'"></ngx-spinner-circle-gradient>
+                                    <ngx-spinner-circle-gradient [color]="demoColors[0]" [size]="'sm'"></ngx-spinner-circle-gradient>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="panel" [ngStyle]="{'border-color': demoColors[0]}">
+                                <div class="panel-heading" [ngStyle]="{'background-color': demoColors[0]}">
+                                    xs(Extra Small)
+                                    <a href="#" class="pull-right">
+                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                    </a>
+                                </div>
+                                <div class="panel-body">
+
+                                    <ngx-spinner-circle-gradient [color]="demoColors[0]" [size]="'xs'"></ngx-spinner-circle-gradient>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xs-1">
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">
-                                    xs(Extra Small)
-                                </div>
-                                <div class="panel-body">
-
-                                    <ngx-spinner-circle-gradient [color]="'#337AB7'" [size]="'xs'"></ngx-spinner-circle-gradient>
-                                </div>
-                            </div>
+                            <input type="color" class="form-control pull-right" name="firstColor" [(ngModel)]="demoColors[0]" />
                         </div>
                     </div>
                 </div>
@@ -69,65 +86,68 @@
     </div>
     <div class="row">
         <div class="col-xs-12">
-            <div class="panel panel-green">
-                <div class="panel-heading">
-                        ngx-spinner-circle-gradient-slow
+            <div class="panel" [ngStyle]="{'border-color': demoColors[1]}">
+                <div class="panel-heading" [ngStyle]="{'background-color': demoColors[1]}">
+                    ngx-spinner-circle-gradient-slow
                 </div>
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-xs-3">
-                            <div class="panel panel-green">
-                                <div class="panel-heading">
+                            <div class="panel" [ngStyle]="{'border-color': demoColors[1]}">
+                                <div class="panel-heading" [ngStyle]="{'background-color': demoColors[1]}">
                                     xl(Extra Large)
                                 </div>
                                 <div class="panel-body">
-                                    <ngx-spinner-circle-gradient-slow [color]="'#80e062'" [size]="'xl'"></ngx-spinner-circle-gradient-slow>
+                                    <ngx-spinner-circle-gradient-slow [color]="demoColors[1]" [size]="'xl'"></ngx-spinner-circle-gradient-slow>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xs-2">
-                            <div class="panel panel-green">
-                                <div class="panel-heading">
+                            <div class="panel" [ngStyle]="{'border-color': demoColors[1]}">
+                                <div class="panel-heading" [ngStyle]="{'background-color': demoColors[1]}">
                                     lg(Large)
                                 </div>
                                 <div class="panel-body">
 
-                                    <ngx-spinner-circle-gradient-slow [color]="'#80e062'" [size]="'lg'"></ngx-spinner-circle-gradient-slow>
+                                    <ngx-spinner-circle-gradient-slow [color]="demoColors[1]" [size]="'lg'"></ngx-spinner-circle-gradient-slow>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-1">
-                            <div class="panel panel-green">
-                                <div class="panel-heading">
+                        <div class="col-xs-2">
+                            <div class="panel" [ngStyle]="{'border-color': demoColors[1]}">
+                                <div class="panel-heading" [ngStyle]="{'background-color': demoColors[1]}">
                                     md(Medium)
                                 </div>
                                 <div class="panel-body">
 
-                                    <ngx-spinner-circle-gradient-slow [color]="'#80e062'" [size]="'md'"></ngx-spinner-circle-gradient-slow>
+                                    <ngx-spinner-circle-gradient-slow [color]="demoColors[1]" [size]="'md'"></ngx-spinner-circle-gradient-slow>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-1">
-                            <div class="panel panel-green">
-                                <div class="panel-heading">
+                        <div class="col-xs-2">
+                            <div class="panel" [ngStyle]="{'border-color': demoColors[1]}">
+                                <div class="panel-heading" [ngStyle]="{'background-color': demoColors[1]}">
                                     sm(small)
                                 </div>
                                 <div class="panel-body">
 
-                                    <ngx-spinner-circle-gradient-slow [color]="'#80e062'" [size]="'sm'"></ngx-spinner-circle-gradient-slow>
+                                    <ngx-spinner-circle-gradient-slow [color]="demoColors[1]" [size]="'sm'"></ngx-spinner-circle-gradient-slow>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-1">
-                            <div class="panel panel-green">
-                                <div class="panel-heading">
+                        <div class="col-xs-2">
+                            <div class="panel" [ngStyle]="{'border-color': demoColors[1]}">
+                                <div class="panel-heading" [ngStyle]="{'background-color': demoColors[1]}">
                                     xs(Extra Small)
                                 </div>
                                 <div class="panel-body">
 
-                                    <ngx-spinner-circle-gradient-slow [color]="'#80e062'" [size]="'xs'"></ngx-spinner-circle-gradient-slow>
+                                    <ngx-spinner-circle-gradient-slow [color]="demoColors[1]" [size]="'xs'"></ngx-spinner-circle-gradient-slow>
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-xs-1">
+                            <input type="color" class="form-control pull-right" name="firstColor" [(ngModel)]="demoColors[1]" />
                         </div>
                     </div>
                 </div>
@@ -136,65 +156,68 @@
     </div>
     <div class="row">
         <div class="col-xs-12">
-            <div class="panel panel-orange">
-                <div class="panel-heading">
+            <div class="panel" [ngStyle]="{'border-color': demoColors[2]}">
+                <div class="panel-heading" [ngStyle]="{'background-color': demoColors[2]}">
                     ngx-spinner-circle-solid
                 </div>
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-xs-3">
-                            <div class="panel panel-orange">
-                                <div class="panel-heading">
+                            <div class="panel" [ngStyle]="{'border-color': demoColors[2]}">
+                                <div class="panel-heading" [ngStyle]="{'background-color': demoColors[2]}">
                                     xl(Extra Large)
                                 </div>
                                 <div class="panel-body">
-                                    <ngx-spinner-circle-solid [color]="'orange'" [size]="'xl'"></ngx-spinner-circle-solid>
+                                    <ngx-spinner-circle-solid [color]="demoColors[2]" [size]="'xl'"></ngx-spinner-circle-solid>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xs-2">
-                            <div class="panel panel-orange">
-                                <div class="panel-heading">
+                            <div class="panel" [ngStyle]="{'border-color': demoColors[2]}">
+                                <div class="panel-heading" [ngStyle]="{'background-color': demoColors[2]}">
                                     lg(Large)
                                 </div>
                                 <div class="panel-body">
 
-                                    <ngx-spinner-circle-solid [color]="'orange'" [size]="'lg'"></ngx-spinner-circle-solid>
+                                    <ngx-spinner-circle-solid [color]="demoColors[2]" [size]="'lg'"></ngx-spinner-circle-solid>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-1">
-                            <div class="panel panel-orange">
-                                <div class="panel-heading">
+                        <div class="col-xs-2">
+                            <div class="panel" [ngStyle]="{'border-color': demoColors[2]}">
+                                <div class="panel-heading" [ngStyle]="{'background-color': demoColors[2]}">
                                     md(Medium)
                                 </div>
                                 <div class="panel-body">
 
-                                    <ngx-spinner-circle-solid [color]="'orange'" [size]="'md'"></ngx-spinner-circle-solid>
+                                    <ngx-spinner-circle-solid [color]="demoColors[2]" [size]="'md'"></ngx-spinner-circle-solid>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-1">
-                            <div class="panel panel-orange">
-                                <div class="panel-heading">
+                        <div class="col-xs-2">
+                            <div class="panel" [ngStyle]="{'border-color': demoColors[2]}">
+                                <div class="panel-heading" [ngStyle]="{'background-color': demoColors[2]}">
                                     sm(small)
                                 </div>
                                 <div class="panel-body">
 
-                                    <ngx-spinner-circle-solid [color]="'orange'" [size]="'sm'"></ngx-spinner-circle-solid>
+                                    <ngx-spinner-circle-solid [color]="demoColors[2]" [size]="'sm'"></ngx-spinner-circle-solid>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-1">
-                            <div class="panel panel-orange">
-                                <div class="panel-heading">
+                        <div class="col-xs-2">
+                            <div class="panel" [ngStyle]="{'border-color': demoColors[2]}">
+                                <div class="panel-heading" [ngStyle]="{'background-color': demoColors[2]}">
                                     xs(Extra Small)
                                 </div>
                                 <div class="panel-body">
 
-                                    <ngx-spinner-circle-solid [color]="'orange'" [size]="'xs'"></ngx-spinner-circle-solid>
+                                    <ngx-spinner-circle-solid [color]="demoColors[2]" [size]="'xs'"></ngx-spinner-circle-solid>
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-xs-1">
+                            <input type="color" class="form-control pull-right" name="firstColor" [(ngModel)]="demoColors[2]" />
                         </div>
                     </div>
                 </div>

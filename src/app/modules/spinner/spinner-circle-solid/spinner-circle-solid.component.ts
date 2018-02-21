@@ -1,11 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'ngx-spinner-circle-solid',
-  templateUrl: './spinner-circle-solid.component.html',
-  styleUrls: ['./spinner-circle-solid.component.css']
+    selector: 'ngx-spinner-circle-solid',
+    templateUrl: './spinner-circle-solid.component.html',
+    styleUrls: ['./spinner-circle-solid.component.css']
 })
-export class SpinnerCircleSolidComponent implements OnInit {
+export class SpinnerCircleSolidComponent implements OnInit, OnChanges {
 
     @Input() color: string;
     @Input() size: string;
@@ -22,6 +22,14 @@ export class SpinnerCircleSolidComponent implements OnInit {
     ngOnInit() {
         this.setStyle();
 
+    }
+
+    ngOnChanges(changes: SimpleChanges) {
+        const color = changes.color;
+        const size = changes.size;
+        if ((color.previousValue && color.previousValue != color.currentValue && !color.firstChange) || (size.previousValue && size.previousValue != size.currentValue && !size.firstChange)) {
+            this.setStyle();
+        }
     }
 
     setStyle() {

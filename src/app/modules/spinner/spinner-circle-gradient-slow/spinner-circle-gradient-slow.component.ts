@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/core';
 
 import * as is from 'is_js';
 
@@ -7,7 +7,7 @@ import * as is from 'is_js';
     templateUrl: './spinner-circle-gradient-slow.component.html',
     styleUrls: ['./spinner-circle-gradient-slow.component.css']
 })
-export class SpinnerCircleGradientSlowComponent implements OnInit {
+export class SpinnerCircleGradientSlowComponent implements OnInit, OnChanges {
 
     @Input() color: string;
     @Input() size: string;
@@ -24,6 +24,14 @@ export class SpinnerCircleGradientSlowComponent implements OnInit {
     ngOnInit() {
         this.setStyle();
 
+    }
+
+    ngOnChanges(changes: SimpleChanges) {
+        const color = changes.color;
+        const size = changes.size;
+        if ((color.previousValue && color.previousValue != color.currentValue && !color.firstChange) || (size.previousValue && size.previousValue != size.currentValue && !size.firstChange)) {
+            this.setStyle();
+        }
     }
 
     setStyle() {

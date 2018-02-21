@@ -1,16 +1,4 @@
-.panel-green {
-    border-color: #80e062;
-}
-.panel-green>.panel-heading {
-    background-color: #80e062;
-    color:white;
-    font-weight:bold;
-}
-.panel-orange {
-    border-color: orange;
-}
-.panel-orange>.panel-heading {
-    background-color: orange;
-    color:white;
-    font-weight:bold;
+.panel-heading {
+    color: white;
+    font-weight: bold;
 }
