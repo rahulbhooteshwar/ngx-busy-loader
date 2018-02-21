@@ -1,0 +1,16 @@
+.panel-green {
+    border-color: green;
+}
+.panel-green>.panel-heading {
+    background-color: green;
+    color:white;
+    font-weight:bold;
+}
+.panel-orange {
+    border-color: orange;
+}
+.panel-orange>.panel-heading {
+    background-color: orange;
+    color:white;
+    font-weight:bold;
+}

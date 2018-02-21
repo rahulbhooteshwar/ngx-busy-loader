@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('ngx-spinner App', () => {
+describe('ngx-busy-loader App', () => {
   let page: AppPage;
 
   beforeEach(() => {
