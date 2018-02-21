@@ -12,12 +12,12 @@ export class SpinnerCircleGradientSlowComponent implements OnInit {
     @Input() color: string;
     @Input() size: string;
     standardSizes = {
-        'xs': '7em',
+        'xs': '3em',
         'sm': '5em',
         'md': '9em',
         'lg': '20em',
         'xl': '25em',
-    }
+    };
     spinnerStyle;
     constructor() { }
 
@@ -30,7 +30,7 @@ export class SpinnerCircleGradientSlowComponent implements OnInit {
         this.color = this.color ? this.color : '#ff8000';
         this.spinnerStyle = {
             'background': `linear-gradient(to right, ${this.color} 10%, rgba(255,128,0, 0) 42%)`
-        }
+        };
         if (is.chrome() || is.safari()) {
             this.spinnerStyle['background'] = `-webkit-linear-gradient(left, ${this.color} 10%, rgba(255,128,0, 0) 42%)`;
         } else if (is.firefox()) {
