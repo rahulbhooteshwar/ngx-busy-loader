@@ -1,8 +1,8 @@
 .panel-green {
-    border-color: green;
+    border-color: #80e062;
 }
 .panel-green>.panel-heading {
-    background-color: green;
+    background-color: #80e062;
     color:white;
     font-weight:bold;
 }
