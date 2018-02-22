@@ -10,6 +10,10 @@ export class AppComponent {
     demoColors = [
         '#80e062',
         '#8081ff',
-        '#fa820a'
+        '#fa820a',
+        '#400080',
+        '#fb3ce8',
+        '#fb3c6b',
+        '#808000'
     ];
 }

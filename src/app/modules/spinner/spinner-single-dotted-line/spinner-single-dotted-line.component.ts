@@ -1,20 +1,21 @@
 import { Component, OnInit, Input, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
 
+
 @Component({
-    selector: 'ngx-spinner-circle-dotted-gradient-slow',
-    templateUrl: './spinner-circle-dotted-gradient-slow.component.html',
-    styleUrls: ['./spinner-circle-dotted-gradient-slow.component.css']
+    selector: 'ngx-spinner-single-dotted-line',
+    templateUrl: './spinner-single-dotted-line.component.html',
+    styleUrls: ['./spinner-single-dotted-line.component.css']
 })
-export class SpinnerCircleDottedGradientSlowComponent implements OnInit, OnChanges {
+export class SpinnerSingleDottedLineComponent implements OnInit, OnChanges {
 
     @Input() color: string;
     @Input() size: string;
     standardSizes = {
-        'xs': '25px',
-        'sm': '35px',
-        'md': '45px',
-        'lg': '70px',
-        'xl': '100px',
+        'xs': '5px',
+        'sm': '10px',
+        'md': '15px',
+        'lg': '20px',
+        'xl': '30px',
     };
     spinnerStyle;
     constructor() { }

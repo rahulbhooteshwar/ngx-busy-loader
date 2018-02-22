@@ -1,23 +1,25 @@
 import { Component, OnInit, Input, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
-    selector: 'ngx-spinner-circle-dotted-gradient-slow',
-    templateUrl: './spinner-circle-dotted-gradient-slow.component.html',
-    styleUrls: ['./spinner-circle-dotted-gradient-slow.component.css']
+    selector: 'ngx-spinner-lines-vertical',
+    templateUrl: './spinner-lines-vertical.component.html',
+    styleUrls: ['./spinner-lines-vertical.component.css']
 })
-export class SpinnerCircleDottedGradientSlowComponent implements OnInit, OnChanges {
+export class SpinnerLinesVerticalComponent implements OnInit, OnChanges {
 
     @Input() color: string;
     @Input() size: string;
+    fontSize;
     standardSizes = {
-        'xs': '25px',
-        'sm': '35px',
-        'md': '45px',
-        'lg': '70px',
-        'xl': '100px',
+        'xs': '5px',
+        'sm': '10px',
+        'md': '15px',
+        'lg': '20px',
+        'xl': '30px',
     };
     spinnerStyle;
-    constructor() { }
+    constructor(public domSanitizer: DomSanitizer) { }
 
     ngOnInit() {
         this.setStyle();
@@ -33,16 +35,14 @@ export class SpinnerCircleDottedGradientSlowComponent implements OnInit, OnChang
     }
 
     setStyle() {
-        this.color = this.color ? this.color : '#ff8000';
-        this.spinnerStyle = {
-            'color': this.color
-        };
+        this.color = this.color ? this.color : '#fb3c6b';
 
         if (Object.keys(this.standardSizes).indexOf(this.size) > -1) {
-            this.spinnerStyle['font-size'] = this.standardSizes[this.size];
+            this.fontSize = this.standardSizes[this.size];
         } else {
-            this.spinnerStyle['font-size'] = this.standardSizes.md;
+            this.fontSize = this.standardSizes.md;
         }
+
     }
 
 }

@@ -6,6 +6,8 @@ import { SpinnerCircleDottedGradientSlowComponent } from './spinner-circle-dotte
 import { SpinnerCircleGradientComponent } from './spinner-circle-gradient/spinner-circle-gradient.component';
 import { SpinnerCircleGradientSlowComponent } from './spinner-circle-gradient-slow/spinner-circle-gradient-slow.component';
 import { SpinnerCircleSolidComponent } from './spinner-circle-solid/spinner-circle-solid.component';
+import { SpinnerLinesVerticalComponent } from './spinner-lines-vertical/spinner-lines-vertical.component';
+import { SpinnerSingleDottedLineComponent } from './spinner-single-dotted-line/spinner-single-dotted-line.component';
 
 @NgModule({
     imports: [
@@ -17,7 +19,9 @@ import { SpinnerCircleSolidComponent } from './spinner-circle-solid/spinner-circ
         SpinnerCircleDottedGradientSlowComponent,
         SpinnerCircleGradientComponent,
         SpinnerCircleGradientSlowComponent,
-        SpinnerCircleSolidComponent
+        SpinnerCircleSolidComponent,
+        SpinnerLinesVerticalComponent,
+        SpinnerSingleDottedLineComponent
     ],
     exports: [
         SpinnerCircleDottedComponent,
@@ -25,7 +29,9 @@ import { SpinnerCircleSolidComponent } from './spinner-circle-solid/spinner-circ
         SpinnerCircleDottedGradientSlowComponent,
         SpinnerCircleGradientComponent,
         SpinnerCircleGradientSlowComponent,
-        SpinnerCircleSolidComponent
+        SpinnerCircleSolidComponent,
+        SpinnerLinesVerticalComponent,
+        SpinnerSingleDottedLineComponent
     ]
 })
 export class SpinnerModule { }
