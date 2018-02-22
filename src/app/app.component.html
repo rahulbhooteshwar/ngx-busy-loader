@@ -1,6 +1,76 @@
 <div class="container-fluid" style="padding:25px">
     <div class="row">
         <div class="col-xs-12">
+            <div class="jumbotron">
+                <h1>Hello, Devs!</h1>
+                <p>
+                    <strong>ngx-busy-loader</strong> is a component library to fulfill all your need of various types of busy load
+                    indicators in your application.
+                    <br/> Go ahead and use our collection of some amazingly cool loaders.
+                </p>
+                <div class="btn-block">
+                    <a class="btn btn-primary btn-lg" role="button" (click)="gettingStartedModal.show()">GET STARTED</a>
+                    <a class="btn btn-outline-secondary btn-lg" target="blank" href="https://github.com/rahulbhooteshwar/ngx-busy-loader" role="button">GITHUB</a>
+                </div>
+                <div class="modal fade" bsModal #gettingStartedModal="bs-modal" tabindex="-1" role="dialog" aria-labelledby="gettingStartedModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title pull-left">Getting Started</h4>
+                                <button type="button" class="close pull-right" aria-label="Close" (click)="gettingStartedModal.hide()">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h3>
+                                    <strong>> Installation</strong>
+                                </h3>
+                                <div class="alert alert-info" role="alert">
+                                    <p>Run command: npm install --save
+                                        <strong>
+                                            <i>ngx-busy-loader</i>
+                                        </strong>
+                                    </p>
+                                </div>
+                                <h3>
+                                    <strong>> Usage</strong>
+                                </h3>
+                                <div>
+                                    <h4>In your App Module</h4>
+                                    <pre>
+{{"import { SpinnerModule } from './modules/spinner/spinner.module';"}}
+{{"@NgModule({
+    declarations: [
+        ...
+    ],
+    imports: [
+        ....
+        SpinnerModule,
+        .....
+    ],
+    providers: [....],
+    bootstrap: [....]
+})"}}
+                                    </pre>
+                                    <h4>Use one of the following components according to your need:</h4>
+                                    <pre>
+<ul>
+<li *ngFor="let demoItem of demoList">
+    <strong>{{demoItem}}</strong>
+</li>
+</ul>
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
             <div class="panel" [ngStyle]="{'border-color': demoColors[0]}">
                 <div class="panel-heading" [ngStyle]="{'background-color': demoColors[0]}">
                     ngx-spinner-circle-gradient
@@ -11,9 +81,6 @@
                             <div class="panel" [ngStyle]="{'border-color': demoColors[0]}">
                                 <div class="panel-heading" [ngStyle]="{'background-color': demoColors[0]}">
                                     xl(Extra Large)
-                                    <a href="#" class="pull-right">
-                                        <span class="glyphicon glyphicon-eye-open"></span>
-                                    </a>
                                 </div>
                                 <div class="panel-body">
                                     <ngx-spinner-circle-gradient [color]="demoColors[0]" [size]="'xl'"></ngx-spinner-circle-gradient>
@@ -24,9 +91,6 @@
                             <div class="panel" [ngStyle]="{'border-color': demoColors[0]}">
                                 <div class="panel-heading" [ngStyle]="{'background-color': demoColors[0]}">
                                     lg(Large)
-                                    <a href="#" class="pull-right">
-                                        <span class="glyphicon glyphicon-eye-open"></span>
-                                    </a>
                                 </div>
                                 <div class="panel-body">
 
@@ -38,9 +102,6 @@
                             <div class="panel" [ngStyle]="{'border-color': demoColors[0]}">
                                 <div class="panel-heading" [ngStyle]="{'background-color': demoColors[0]}">
                                     md(Medium)
-                                    <a href="#" class="pull-right">
-                                        <span class="glyphicon glyphicon-eye-open"></span>
-                                    </a>
                                 </div>
                                 <div class="panel-body">
 
@@ -52,9 +113,6 @@
                             <div class="panel" [ngStyle]="{'border-color': demoColors[0]}">
                                 <div class="panel-heading" [ngStyle]="{'background-color': demoColors[0]}">
                                     sm(small)
-                                    <a href="#" class="pull-right">
-                                        <span class="glyphicon glyphicon-eye-open"></span>
-                                    </a>
                                 </div>
                                 <div class="panel-body">
 
@@ -66,9 +124,6 @@
                             <div class="panel" [ngStyle]="{'border-color': demoColors[0]}">
                                 <div class="panel-heading" [ngStyle]="{'background-color': demoColors[0]}">
                                     xs(Extra Small)
-                                    <a href="#" class="pull-right">
-                                        <span class="glyphicon glyphicon-eye-open"></span>
-                                    </a>
                                 </div>
                                 <div class="panel-body">
 

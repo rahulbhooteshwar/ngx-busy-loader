@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ModalModule } from 'ngx-bootstrap';
 
 
 import { AppComponent } from './app.component';
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     imports: [
         BrowserModule,
         SpinnerModule,
-        FormsModule
+        FormsModule,
+        ModalModule.forRoot()
     ],
     providers: [],
     bootstrap: [AppComponent]
