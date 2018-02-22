@@ -1,6 +1,15 @@
 {
   "name": "ngx-busy-loader",
-  "version": "2.0.0",
+  "description": "Configurable spinner component library for Angular apps",
+  "version": "2.0.1",
+  "keywords": [
+      "ng","ngx","ngx-spinner", "Angular Spinner", "Spinner", "Busy Loader", "Loader", "Load Indicator"
+  ],
+  "bugs": {
+    "url" : "https://github.com/rahulbhooteshwar/ngx-busy-loader/issues",
+    "email" : "rahul.bhooteshwar@gmail.com"
+  },
+  "homepage": "https://rahulbhooteshwar.github.io/ngx-busy-loader/",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
