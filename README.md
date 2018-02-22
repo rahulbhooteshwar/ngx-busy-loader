@@ -7,7 +7,7 @@ your need of various types of busy load indicators in your application.
 
 Go ahead and use our collection of some amazingly cool loaders.
 
-[See the Demo Here](https://rahulbhooteshwar.github.io/ngx-busy-loader/)
+# [See the Demo Here](https://rahulbhooteshwar.github.io/ngx-busy-loader/)
 
 ##### **Getting Started**
 
