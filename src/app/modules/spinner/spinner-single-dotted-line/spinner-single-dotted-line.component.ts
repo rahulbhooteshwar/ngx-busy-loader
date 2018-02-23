@@ -10,6 +10,9 @@ export class SpinnerSingleDottedLineComponent implements OnInit, OnChanges {
 
     @Input() color: string;
     @Input() size: string;
+    @Input() full: boolean;
+    @Input() overlayColor: string;
+
     standardSizes = {
         'xs': '5px',
         'sm': '10px',
@@ -18,6 +21,7 @@ export class SpinnerSingleDottedLineComponent implements OnInit, OnChanges {
         'xl': '30px',
     };
     spinnerStyle;
+    overlayStyle;
     constructor() { }
 
     ngOnInit() {
@@ -28,13 +32,17 @@ export class SpinnerSingleDottedLineComponent implements OnInit, OnChanges {
     ngOnChanges(changes: SimpleChanges) {
         const color = changes.color;
         const size = changes.size;
-        if ((color.previousValue && color.previousValue != color.currentValue && !color.firstChange) || (size.previousValue && size.previousValue != size.currentValue && !size.firstChange)) {
+        if ((color && color.previousValue && color.previousValue != color.currentValue && !color.firstChange) || (size && size.previousValue && size.previousValue != size.currentValue && !size.firstChange)) {
             this.setStyle();
         }
     }
 
     setStyle() {
         this.color = this.color ? this.color : '#ff8000';
+        this.overlayColor = this.overlayColor ? this.overlayColor : '#ff8000';
+        this.overlayStyle = {
+            'background-color': this.overlayColor
+        }
         this.spinnerStyle = {
             'color': this.color
         };

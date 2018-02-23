@@ -61,3 +61,26 @@
         box-shadow: 0 2.5em 0 0;
     }
 }
+
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1060;
+    background-color: rgba(255, 255, 255, 0.596);
+    transform-style: preserve-3d;
+}
+
+.spinner-container {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    z-index: 1070;
+    transform: translate3d(-50%, -50%, 0);
+}

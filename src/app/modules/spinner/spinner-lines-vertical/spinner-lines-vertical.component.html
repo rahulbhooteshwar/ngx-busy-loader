@@ -1,1 +1,11 @@
-<div class="loader" [attr.style]="domSanitizer.bypassSecurityTrustStyle('--main-bg-color:' + color + ';' + 'font-size:' + fontSize)">Loading...</div>
+<ng-container *ngIf="full else partial">
+    <div id="fullloading" class="spinner-overlay" [ngStyle]="overlayStyle">
+        <div class="spinner-container">
+            <div class="loader" [attr.style]="domSanitizer.bypassSecurityTrustStyle('--main-bg-color:' + color + ';' + 'font-size:' + fontSize)">Loading...</div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-template #partial>
+    <div class="loader" [attr.style]="domSanitizer.bypassSecurityTrustStyle('--main-bg-color:' + color + ';' + 'font-size:' + fontSize)">Loading...</div>
+</ng-template>

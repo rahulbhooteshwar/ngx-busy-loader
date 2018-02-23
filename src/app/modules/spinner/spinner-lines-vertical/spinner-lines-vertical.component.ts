@@ -10,6 +10,9 @@ export class SpinnerLinesVerticalComponent implements OnInit, OnChanges {
 
     @Input() color: string;
     @Input() size: string;
+    @Input() full: boolean;
+    @Input() overlayColor: string;
+
     fontSize;
     standardSizes = {
         'xs': '5px',
@@ -19,6 +22,7 @@ export class SpinnerLinesVerticalComponent implements OnInit, OnChanges {
         'xl': '30px',
     };
     spinnerStyle;
+    overlayStyle;
     constructor(public domSanitizer: DomSanitizer) { }
 
     ngOnInit() {
@@ -29,13 +33,17 @@ export class SpinnerLinesVerticalComponent implements OnInit, OnChanges {
     ngOnChanges(changes: SimpleChanges) {
         const color = changes.color;
         const size = changes.size;
-        if ((color.previousValue && color.previousValue != color.currentValue && !color.firstChange) || (size.previousValue && size.previousValue != size.currentValue && !size.firstChange)) {
+        if ((color && color.previousValue && color.previousValue != color.currentValue && !color.firstChange) || (size && size.previousValue && size.previousValue != size.currentValue && !size.firstChange)) {
             this.setStyle();
         }
     }
 
     setStyle() {
         this.color = this.color ? this.color : '#fb3c6b';
+        this.overlayColor = this.overlayColor ? this.overlayColor : '#ff80008f';
+        this.overlayStyle = {
+            'background-color': this.overlayColor
+        }
 
         if (Object.keys(this.standardSizes).indexOf(this.size) > -1) {
             this.fontSize = this.standardSizes[this.size];
