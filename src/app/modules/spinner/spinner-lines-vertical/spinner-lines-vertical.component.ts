@@ -10,7 +10,7 @@ export class SpinnerLinesVerticalComponent implements OnInit, OnChanges {
 
     @Input() color: string;
     @Input() size: string;
-    @Input() full: boolean;
+    @Input() overlay: boolean;
     @Input() overlayColor: string;
 
     fontSize;
@@ -23,6 +23,7 @@ export class SpinnerLinesVerticalComponent implements OnInit, OnChanges {
     };
     spinnerStyle;
     overlayStyle;
+    containerStyle;
     constructor(public domSanitizer: DomSanitizer) { }
 
     ngOnInit() {
@@ -40,7 +41,7 @@ export class SpinnerLinesVerticalComponent implements OnInit, OnChanges {
 
     setStyle() {
         this.color = this.color ? this.color : '#fb3c6b';
-        this.overlayColor = this.overlayColor ? this.overlayColor : '#ff80008f';
+        this.overlayColor = this.overlayColor ? this.overlayColor : '#fefefee8';
         this.overlayStyle = {
             'background-color': this.overlayColor
         }
@@ -49,6 +50,10 @@ export class SpinnerLinesVerticalComponent implements OnInit, OnChanges {
             this.fontSize = this.standardSizes[this.size];
         } else {
             this.fontSize = this.standardSizes.md;
+        }
+
+        this.containerStyle = {
+            'min-height': (this.fontSize.replace('px', '') * 5) + 'px'
         }
 
     }

@@ -1,1 +1,11 @@
-<div class="loader" [ngStyle]="spinnerStyle">Loading...</div>
+<ng-container *ngIf="overlay else partial">
+    <div id="fullloading" class="spinner-overlay" [ngStyle]="overlayStyle">
+        <div class="spinner-container">
+            <div class="loader" [ngStyle]="spinnerStyle">Loading...</div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-template #partial>
+    <div class="loader" [ngStyle]="spinnerStyle">Loading...</div>
+</ng-template>

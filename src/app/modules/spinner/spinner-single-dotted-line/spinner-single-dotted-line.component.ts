@@ -10,7 +10,7 @@ export class SpinnerSingleDottedLineComponent implements OnInit, OnChanges {
 
     @Input() color: string;
     @Input() size: string;
-    @Input() full: boolean;
+    @Input() overlay: boolean;
     @Input() overlayColor: string;
 
     standardSizes = {
@@ -38,8 +38,8 @@ export class SpinnerSingleDottedLineComponent implements OnInit, OnChanges {
     }
 
     setStyle() {
-        this.color = this.color ? this.color : '#ff8000';
-        this.overlayColor = this.overlayColor ? this.overlayColor : '#ff8000';
+        this.color = this.color ? this.color : '#fb3c6b';
+        this.overlayColor = this.overlayColor ? this.overlayColor : '#fefefee8';
         this.overlayStyle = {
             'background-color': this.overlayColor
         }

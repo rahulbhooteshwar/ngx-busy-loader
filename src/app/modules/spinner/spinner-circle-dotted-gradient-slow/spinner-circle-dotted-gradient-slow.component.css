@@ -105,3 +105,7 @@
     z-index: 1070;
     transform: translate3d(-50%, -50%, 0);
 }
+
+.spinner-overlay .loader {
+    z-index: 100000;
+}

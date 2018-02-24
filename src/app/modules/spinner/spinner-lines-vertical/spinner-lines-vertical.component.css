@@ -91,6 +91,6 @@
     transform: translate3d(-50%, -50%, 0);
 }
 
-.loader {
+.spinner-overlay .loader {
     z-index: 100000;
 }

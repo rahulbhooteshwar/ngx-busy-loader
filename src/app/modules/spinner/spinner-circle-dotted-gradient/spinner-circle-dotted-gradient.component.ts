@@ -33,7 +33,7 @@ export class SpinnerCircleDottedGradientComponent implements OnInit, OnChanges {
     }
 
     setStyle() {
-        this.color = this.color ? this.color : '#ff8000';
+        this.color = this.color ? this.color : '#fb3c6b';
         this.spinnerStyle = {
             'color': this.color
         };

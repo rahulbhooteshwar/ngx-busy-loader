@@ -34,7 +34,7 @@ export class SpinnerCircleGradientComponent implements OnInit, OnChanges {
     }
 
     setStyle() {
-        this.color = this.color ? this.color : '#ff8000';
+        this.color = this.color ? this.color : '#fb3c6b';
         this.spinnerStyle = {
             'background': `linear-gradient(to right, ${this.color} 10%, rgba(255,128,0, 0) 42%)`
         };

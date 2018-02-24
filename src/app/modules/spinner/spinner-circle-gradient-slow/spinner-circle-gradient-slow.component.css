@@ -1,6 +1,9 @@
 .loader {
     font-size: 10px;
-    margin: 50px auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: inline-block;
+    margin: 20px;
     text-indent: -9999em;
     width: 9em;
     height: 9em;
@@ -76,4 +79,13 @@
     height: 44px;
     z-index: 1070;
     transform: translate3d(-50%, -50%, 0);
+}
+
+.spinner-overlay .loader {
+    z-index: 100000;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
 }

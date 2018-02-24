@@ -24,7 +24,7 @@ import { SpinnerSingleDottedLineComponent } from './spinner-single-dotted-line/s
         SpinnerSingleDottedLineComponent
     ],
     exports: [
-        SpinnerCircleDottedComponent,
+        // SpinnerCircleDottedComponent,
         SpinnerCircleDottedGradientComponent,
         SpinnerCircleDottedGradientSlowComponent,
         SpinnerCircleGradientComponent,
