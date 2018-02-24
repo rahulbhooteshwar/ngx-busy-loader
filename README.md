@@ -1,4 +1,12 @@
-# ngx-busy-loader
+<a href="https://rahulbhooteshwar.github.io/ngx-busy-loader/">
+    <h1 align="center">ngx-busy-loader</h1>
+</a>
+
+<p align="center">
+Configurable spinner component library for <a href="https://angular.io/">Angular</a> apps
+<p>
+
+#
 
 Hello, Devs!
 
@@ -9,17 +17,27 @@ Go ahead and use our collection of some amazingly cool loaders.
 
 # [See the Demo Here](https://rahulbhooteshwar.github.io/ngx-busy-loader/)
 
-##### **Getting Started**
+## Links
+- [Documentation](https://github.com/rahulbhooteshwar/ngx-busy-loader#readme)
 
-#### **&gt; Installation**
+- [Release Notes](https://github.com/rahulbhooteshwar/ngx-busy-loader/blob/master/CHANGELOG.md)
 
-Run command: npm install --save **_ngx-busy-loader_**
+## **Getting Started**
+### **ngx-busy-loader** contains various types of spinner that can be used with a number of configurable options like size, color, overlay and overlayColor
 
-#### **&gt; Usage**
+## **Installation Instructions**
+
+Install `ngx-busy-loader` from `npm`
+```bash
+npm install ngx-busy-loader --save
+```
+You will not need anything other than this 
+
+# Usage
 
 ##### **In your App Module**
 ##### 
-
+```bash
 import { SpinnerModule } from
 './modules/spinner/spinner.module';
 
@@ -28,35 +46,69 @@ import { SpinnerModule } from
     imports: [SpinnerModule,.....],  
     .....  
 })
+```
 
-##### **Use one of the following components according to your need:**
+##### **Use one of the following components as shown:**
+#####
 
-**&lt;ngx-spinner-circle-gradient&gt;&lt;/ngx-spinner-circle-gradient&gt;**
+```bash
+<ngx-spinner-circle-gradient></ngx-spinner-circle-gradient>
+```
+```bash
+<ngx-spinner-circle-gradient-slow></ngx-spinner-circle-gradient-slow>
+```
+```bash
+<ngx-spinner-circle-solid></ngx-spinner-circle-solid>
+```
+```bash
+<ngx-spinner-circle-dotted-gradient></ngx-spinner-circle-dotted-gradient>
+```
+```bash
+<ngx-spinner-circle-dotted-gradient-slow></ngx-spinner-circle-dotted-gradient-slow>
+```
+```bash
+<ngx-spinner-single-dotted-line></ngx-spinner-single-dotted-line>
+```
+```bash
+<ngx-spinner-lines-vertical></ngx-spinner-lines-vertical>  
+```
 
-**&lt;ngx-spinner-circle-gradient-slow&gt;&lt;/ngx-spinner-circle-gradient-slow&gt;**
-
-**&lt;ngx-spinner-circle-solid&gt;&lt;/ngx-spinner-circle-solid&gt;**
-
-**&lt;ngx-spinner-circle-dotted-gradient&gt;&lt;/ngx-spinner-circle-dotted-gradient&gt;**
-
-**&lt;ngx-spinner-circle-dotted-gradient-slow&gt;&lt;/ngx-spinner-circle-dotted-gradient-slow&gt;**
-
-**&lt;ngx-spinner-single-dotted-line&gt;&lt;/ngx-spinner-single-dotted-line&gt;**
-
-**&lt;ngx-spinner-lines-vertical&gt;&lt;/ngx-spinner-lines-vertical&gt;**  
-
-#####   
-
-#### **&gt; Options**
+##### **&gt; Options**
 
 **You can pass input
 properties for customization, as shown below:**
 
-**&lt;ngx-spinner-lines-vertical
+```bash
+<ngx-spinner-lines-vertical
 [color]="'some_color_or_hash'"
-[size]="'some_size_from_available_ones'"&gt;&lt;/ngx-spinner-lines-vertical&gt;**
+[size]="'some_size_from_available_ones'"></ngx-spinner-lines-vertical>
+```
 
-        **Available sizes**: xl, lg, md, sm, xs
+**Available Sizes**: xl, lg, md, sm, xs
 
-        You can pass
-dynamic values as input binding as well.
+You can pass dynamic values as input binding as well.
+
+**Full Page Overlay**: 
+
+You can also use any of the busy load indicators as full page overlay indicator. This is useful when required to disable any user acttion while waiting for  any process to complete.
+
+***_Using as overlay spinner_***
+
+```bash
+<ngx-spinner-lines-vertical
+[overlay]="true"
+[color]="'some_color_or_hash'"
+[size]="'some_size'"></ngx-spinner-lines-vertical>
+```
+
+Optionally, you can pass overlay color for background:
+
+```bash
+<ngx-spinner-lines-vertical
+[overlay]="true"
+[overlayColor]="'#24292e08'"
+[color]="'some_color_or_hash'"
+[size]="'some_size'"></ngx-spinner-lines-vertical>
+```
+
+Try to use some transparent overlay color for better user experience.

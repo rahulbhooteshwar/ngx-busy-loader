@@ -2,6 +2,11 @@
     "name": "ngx-busy-loader",
     "description": "Configurable spinner component library for Angular apps",
     "version": "2.1.0",
+    "author": {
+        "name": "Rahul Bhooteshwar",
+        "email": "rahul.bhooteshwar@gmail.com",
+        "url": "https://rahulbhooteshwar.github.io/"
+    },
     "keywords": [
         "ng",
         "ngx",
@@ -17,7 +22,7 @@
         "url": "https://github.com/rahulbhooteshwar/ngx-busy-loader/issues",
         "email": "rahul.bhooteshwar@gmail.com"
     },
-    "homepage": "https://rahulbhooteshwar.github.io/ngx-busy-loader/",
+    "homepage": "https://github.com/rahulbhooteshwar/ngx-busy-loader",
     "license": "MIT",
     "scripts": {
         "ng": "ng",
