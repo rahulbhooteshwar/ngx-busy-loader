@@ -1,6 +1,6 @@
-<a href="https://rahulbhooteshwar.github.io/ngx-busy-loader/">
-    <h1 align="center">ngx-busy-loader</h1>
-</a>
+
+<h1 align="center">ngx-busy-loader</h1>
+
 
 <p align="center">
 Configurable spinner component library for <a href="https://angular.io/">Angular</a> apps
@@ -15,7 +15,10 @@ your need of various types of busy load indicators in your application.
 
 Go ahead and use our collection of some amazingly cool loaders.
 
-# [See the Demo Here](https://rahulbhooteshwar.github.io/ngx-busy-loader/)
+
+<a href="https://rahulbhooteshwar.github.io/ngx-busy-loader/">
+    <h1 align="center" style="color:orange">See the Demo Here</h1>
+</a>
 
 ## Links
 - [Documentation](https://github.com/rahulbhooteshwar/ngx-busy-loader#readme)
@@ -38,8 +41,7 @@ You will not need anything other than this
 ##### **In your App Module**
 ##### 
 ```bash
-import { SpinnerModule } from
-'./modules/spinner/spinner.module';
+import { SpinnerModule } from 'ngx-busy-loader';
 
 @NgModule({  
     ....  

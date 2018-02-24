@@ -1,7 +1,7 @@
 {
     "name": "ngx-busy-loader",
     "description": "Configurable spinner component library for Angular apps",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "author": {
         "name": "Rahul Bhooteshwar",
         "email": "rahul.bhooteshwar@gmail.com",
