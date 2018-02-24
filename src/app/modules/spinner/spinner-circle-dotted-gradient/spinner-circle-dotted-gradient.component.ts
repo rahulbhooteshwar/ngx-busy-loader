@@ -9,6 +9,8 @@ export class SpinnerCircleDottedGradientComponent implements OnInit, OnChanges {
 
     @Input() color: string;
     @Input() size: string;
+    @Input() overlay: boolean;
+    @Input() overlayColor: string;
     standardSizes = {
         'xs': '5px',
         'sm': '10px',
@@ -17,6 +19,8 @@ export class SpinnerCircleDottedGradientComponent implements OnInit, OnChanges {
         'xl': '25px',
     };
     spinnerStyle;
+    overlayStyle;
+
     constructor() { }
 
     ngOnInit() {
@@ -27,7 +31,7 @@ export class SpinnerCircleDottedGradientComponent implements OnInit, OnChanges {
     ngOnChanges(changes: SimpleChanges) {
         const color = changes.color;
         const size = changes.size;
-        if ((color.previousValue && color.previousValue != color.currentValue && !color.firstChange) || (size.previousValue && size.previousValue != size.currentValue && !size.firstChange)) {
+        if ((color && color.previousValue && color.previousValue != color.currentValue && !color.firstChange) || (size && size.previousValue && size.previousValue != size.currentValue && !size.firstChange)) {
             this.setStyle();
         }
     }
@@ -37,6 +41,11 @@ export class SpinnerCircleDottedGradientComponent implements OnInit, OnChanges {
         this.spinnerStyle = {
             'color': this.color
         };
+
+        this.overlayColor = this.overlayColor ? this.overlayColor : '#fefefee8';
+        this.overlayStyle = {
+            'background-color': this.overlayColor
+        }
 
         if (Object.keys(this.standardSizes).indexOf(this.size) > -1) {
             this.spinnerStyle['font-size'] = this.standardSizes[this.size];

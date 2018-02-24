@@ -10,6 +10,8 @@ import * as is from 'is_js';
 export class SpinnerCircleGradientComponent implements OnInit, OnChanges {
     @Input() color: string;
     @Input() size: string;
+    @Input() overlay: boolean;
+    @Input() overlayColor: string;
     standardSizes = {
         'xs': '3em',
         'sm': '5em',
@@ -18,6 +20,7 @@ export class SpinnerCircleGradientComponent implements OnInit, OnChanges {
         'xl': '25em',
     };
     spinnerStyle;
+    overlayStyle;
     constructor() { }
 
     ngOnInit() {
@@ -28,7 +31,7 @@ export class SpinnerCircleGradientComponent implements OnInit, OnChanges {
     ngOnChanges(changes: SimpleChanges) {
         const color = changes.color;
         const size = changes.size;
-        if ((color.previousValue && color.previousValue != color.currentValue && !color.firstChange) || (size.previousValue && size.previousValue != size.currentValue && !size.firstChange)) {
+        if ((color && color.previousValue && color.previousValue != color.currentValue && !color.firstChange) || (size && size.previousValue && size.previousValue != size.currentValue && !size.firstChange)) {
             this.setStyle();
         }
     }
@@ -38,6 +41,10 @@ export class SpinnerCircleGradientComponent implements OnInit, OnChanges {
         this.spinnerStyle = {
             'background': `linear-gradient(to right, ${this.color} 10%, rgba(255,128,0, 0) 42%)`
         };
+        this.overlayColor = this.overlayColor ? this.overlayColor : '#fefefee8';
+        this.overlayStyle = {
+            'background-color': this.overlayColor
+        }
         if (is.chrome() || is.safari()) {
             this.spinnerStyle['background'] = `-webkit-linear-gradient(left, ${this.color} 10%, rgba(255,128,0, 0) 42%)`;
         } else if (is.firefox()) {

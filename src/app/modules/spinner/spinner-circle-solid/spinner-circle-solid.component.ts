@@ -9,6 +9,8 @@ export class SpinnerCircleSolidComponent implements OnInit, OnChanges {
 
     @Input() color: string;
     @Input() size: string;
+    @Input() overlay: boolean;
+    @Input() overlayColor: string;
     standardSizes = {
         'xs': '3em',
         'sm': '5em',
@@ -17,6 +19,7 @@ export class SpinnerCircleSolidComponent implements OnInit, OnChanges {
         'xl': '25em',
     };
     spinnerStyle;
+    overlayStyle;
     constructor() { }
 
     ngOnInit() {
@@ -27,7 +30,7 @@ export class SpinnerCircleSolidComponent implements OnInit, OnChanges {
     ngOnChanges(changes: SimpleChanges) {
         const color = changes.color;
         const size = changes.size;
-        if ((color.previousValue && color.previousValue != color.currentValue && !color.firstChange) || (size.previousValue && size.previousValue != size.currentValue && !size.firstChange)) {
+        if ((color && color.previousValue && color.previousValue != color.currentValue && !color.firstChange) || (size && size.previousValue && size.previousValue != size.currentValue && !size.firstChange)) {
             this.setStyle();
         }
     }
@@ -37,6 +40,11 @@ export class SpinnerCircleSolidComponent implements OnInit, OnChanges {
         this.spinnerStyle = {
             'background': this.color
         };
+
+        this.overlayColor = this.overlayColor ? this.overlayColor : '#fefefee8';
+        this.overlayStyle = {
+            'background-color': this.overlayColor
+        }
 
         if (Object.keys(this.standardSizes).indexOf(this.size) > -1) {
             this.spinnerStyle['height'] = this.standardSizes[this.size];
