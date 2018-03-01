@@ -15,10 +15,13 @@ your need of various types of busy load indicators in your application.
 
 Go ahead and use our collection of some amazingly cool loaders.
 
+<h1 align="center" style="color:orange">
+    <a href="https://rahulbhooteshwar.github.io/ngx-busy-loader/">
+        See the Demo Here
+    </a>
+</h1>
 
-<a href="https://rahulbhooteshwar.github.io/ngx-busy-loader/">
-    <h1 align="center" style="color:orange">See the Demo Here</h1>
-</a>
+
 
 ## Links
 - [Documentation](https://github.com/rahulbhooteshwar/ngx-busy-loader#readme)
