@@ -27,8 +27,7 @@
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
-        "build": "ng build --prod",
-        "build-demo": "ng build --bh /ngx-busy-loader/ -op docs --prod",
+        "build": "ng build --bh /ngx-busy-loader/ -op docs --prod",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
