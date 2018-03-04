@@ -26,7 +26,8 @@ after_success: |
     #git checkout -b master
     git status
     git add docs
-    git user.name='travis' -c user.email='travis' commit -m "Updated Demo"
+    git status
+    git -C user.name='travis' -c user.email='travis' commit -m "Updated Demo"
     # Make sure to make the output quiet, or else the API token will leak!
     # This works because the API key can replace your password.
     git push -q https://rahulbhooteshwar:$GITHUB_API_KEY@github.com/rahulbhooteshwar/ngx-busy-loader.git master &2>/dev/null
