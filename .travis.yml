@@ -19,10 +19,12 @@ script:
   - npm run build
 
 after_success: |
+  echo "$GITHUB_API_KEY"
   if [ -n "$GITHUB_API_KEY" ]; then
     cd "$TRAVIS_BUILD_DIR"
     #git init
     #git checkout -b master
+    git status
     git add docs
     git user.name='travis' -c user.email='travis' commit -m "Updated Demo"
     # Make sure to make the output quiet, or else the API token will leak!
