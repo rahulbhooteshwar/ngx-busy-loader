@@ -1,0 +1,36 @@
+#.travis.yml
+
+language: node_js
+
+node_js:
+  - "8.8.1"
+  
+cache:
+  directories:
+     - ./node_modules
+branches:
+  only:
+    - master
+
+before_script:
+  - npm install
+
+script:
+  - npm run build
+
+after_success: |
+  if [ -n "$GITHUB_API_KEY" ]; then
+    cd "$TRAVIS_BUILD_DIR"
+    #git init
+    #git checkout -b master
+    git add docs
+    git user.name='travis' -c user.email='travis' commit -m "Updated Demo"
+    # Make sure to make the output quiet, or else the API token will leak!
+    # This works because the API key can replace your password.
+    git push -q https://rahulbhooteshwar:$GITHUB_API_KEY@github.com/rahulbhooteshwar/ngx-busy-loader.git master &2>/dev/null
+    cd "$TRAVIS_BUILD_DIR"
+  fi
+notifications:
+  email:
+    on_failure: always
+    on_success: always
