@@ -117,3 +117,9 @@ Optionally, you can pass overlay color for background:
 ```
 
 Try to use some transparent overlay color for better user experience.
+
+
+# Browser Support
+`ngx-busy-loader` is well verified on all modern browsers using Browser Stack. Using browserstack we make sure cross browser compatibility of the module, so that it works seamlessly on all supported browsers. Browserstack has helped us in identifying issues at very early stage.
+
+[![Browser Stack](https://bstacksupport.zendesk.com/attachments/token/PzdqcKEmprO9zGDgG7ASHgcqi/?name=browserstack-logo-600x315.png)](http://browserstack.com/) 
